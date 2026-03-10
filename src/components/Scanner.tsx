@@ -115,10 +115,10 @@ export default function Scanner({ onScan }: ScannerProps) {
                             autoPlay
                             style={{
                                 width: "100%",
+                                height: "300px",
                                 borderRadius: "var(--radius-md)",
                                 backgroundColor: "black",
-                                objectFit: "cover",
-                                minHeight: "300px"
+                                objectFit: "cover"
                             }}
                         />
                         {/* Fake scanner reticle for UX */}
