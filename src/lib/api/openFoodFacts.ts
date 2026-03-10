@@ -57,8 +57,9 @@ export async function fetchProductByBarcode(barcode: string): Promise<ProductDat
 
         const data: ProductData = await res.json();
 
-        // Status 1 means product found
-        if (data.status === 1) {
+        // Status 1 means product found in global API database. 
+        // However, it could be an empty user-submitted stub without a name.
+        if (data.status === 1 && data.product && data.product.product_name) {
             return data;
         }
 

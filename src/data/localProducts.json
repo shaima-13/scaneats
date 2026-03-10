@@ -4,419 +4,670 @@
     "product_name": "Good Day Cashew Cookies",
     "brand": "Britannia",
     "ingredients": "Wheat Flour (Gluten) (57%), Palm Oil, Sugar, Cashew Bits (Nuts) (4.5%), Invert Sugar, Whole Milk Powder (Milk) (1%), Butter (Milk) (0.6%), Raising Agents: (Ammonium Bicarbonate & Sodium Bicarbonate), Salt, Emulsifier (Soya Lecithin E322), Mono & Diglycerides of Fatty Acids (Palm), Diacetyl Tartaric Acid.",
-    "nutrition_per_100g": { "energy_kcal": 495, "total_carbohydrates_g": 67.0, "total_sugars_g": 22.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 495,
+      "total_carbohydrates_g": 67.0,
+      "total_sugars_g": 22.0
+    }
   },
   {
     "barcode": "8901491101830",
     "product_name": "India's Magic Masala Chips",
     "brand": "Lay's",
     "ingredients": "Potato, Edible Vegetable Oil (Palmolein, Rice Bran Oil), Spices & Condiments (Onion Powder, Chilli Powder, Dried Mango Powder, Coriander Powder, Ginger Powder, Garlic Powder, Black Pepper Powder, Turmeric Powder), Iodized Salt, Black Salt, Sugar, Tomato Powder, Citric Acid (330).",
-    "nutrition_per_100g": { "energy_kcal": 544, "total_carbohydrates_g": 52.3, "total_sugars_g": 2.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 544,
+      "total_carbohydrates_g": 52.3,
+      "total_sugars_g": 2.0
+    }
   },
   {
     "barcode": "8901058000184",
     "product_name": "2-Minute Masala Noodles",
     "brand": "Maggi",
     "ingredients": "Noodles: Refined Wheat Flour (Maida), Palm Oil, Salt, Wheat Gluten, Mineral (Calcium Carbonate), Thickeners (508 & 412), Acidity Regulators (501(i) & 500(i)). Masala: Hydrolysed Groundnut Protein, Mixed Spices (23.6%) (Dehydrated Onion, Coriander, Red Chilli, Turmeric, Garlic, Cumin, Aniseed, Fenugreek, Ginger, Black Pepper, Clove, Cardamom), Sugar, Starch, Palm Oil, Salt.",
-    "nutrition_per_100g": { "energy_kcal": 427, "total_carbohydrates_g": 63.5, "total_sugars_g": 2.2 }
+    "nutrition_per_100g": {
+      "energy_kcal": 427,
+      "total_carbohydrates_g": 63.5,
+      "total_sugars_g": 2.2
+    }
   },
   {
     "barcode": "8901262010016",
     "product_name": "Pasteurised Butter (Salted)",
     "brand": "Amul",
     "ingredients": "Butter (Milk Fat 80%), Iodized Salt, Natural Colour (Annatto/Carotene).",
-    "nutrition_per_100g": { "energy_kcal": 722, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 722,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901233013824",
     "product_name": "Dairy Milk Silk (Plain)",
     "brand": "Cadbury",
     "ingredients": "Sugar, Milk Solids (25%), Cocoa Butter, Cocoa Solids, Emulsifiers (442, 476), Flavours (Natural, Nature Identical and Artificial Vanilla Flavouring Substances).",
-    "nutrition_per_100g": { "energy_kcal": 532, "total_carbohydrates_g": 58.6, "total_sugars_g": 54.3 }
+    "nutrition_per_100g": {
+      "energy_kcal": 532,
+      "total_carbohydrates_g": 58.6,
+      "total_sugars_g": 54.3
+    }
   },
   {
     "barcode": "8901014002161",
     "product_name": "Parle-G Biscuits",
     "brand": "Parle",
     "ingredients": "Wheat Flour (68.3%), Sugar, Vegetable Oil (Palm Oil), Glucose-Fructose Syrup, Salt, Raising Agents (Ammonium Carbonates, Sodium Hydrogen Carbonate), Skimmed Milk Powder (0.3%), Artificial Flavouring, Emulsifier (Diacetyl Tartaric Acid Esters).",
-    "nutrition_per_100g": { "energy_kcal": 451, "total_carbohydrates_g": 78.2, "total_sugars_g": 25.5 }
+    "nutrition_per_100g": {
+      "energy_kcal": 451,
+      "total_carbohydrates_g": 78.2,
+      "total_sugars_g": 25.5
+    }
   },
   {
     "barcode": "8901491503047",
     "product_name": "Kurkure Masala Munch",
     "brand": "Kurkure",
     "ingredients": "Rice Meal, Edible Vegetable Oil (Palmolein), Corn Meal, Gram Meal, Spices & Condiments (Onion Powder, Chilli Powder, Amchur, Coriander Powder, Ginger Powder, Garlic Powder, Black Pepper, Turmeric, Fenugreek Leaf), Salt, Black Salt, Tomato Powder, Sugar, Citric Acid.",
-    "nutrition_per_100g": { "energy_kcal": 558, "total_carbohydrates_g": 56.6, "total_sugars_g": 0.5 }
+    "nutrition_per_100g": {
+      "energy_kcal": 558,
+      "total_carbohydrates_g": 56.6,
+      "total_sugars_g": 0.5
+    }
   },
   {
     "barcode": "8901725181220",
     "product_name": "Aloo Bhujia",
     "brand": "Haldiram's",
     "ingredients": "Potatoes (44%), Edible Vegetable Oil (Peanut, Corn & Cotton Seed), Chickpeas Flour (12%), Moth Bean Flour (2%), Starch (Sago), Salt, Mixed Spices (Coriander Powder, Cumin Powder, Ginger Powder, Red Chilli Powder, Mace Powder, Nutmeg Powder, Mint Leaves Powder), Mango Powder, Citric Acid.",
-    "nutrition_per_100g": { "energy_kcal": 584, "total_carbohydrates_g": 42.0, "total_sugars_g": 2.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 584,
+      "total_carbohydrates_g": 42.0,
+      "total_sugars_g": 2.0
+    }
   },
   {
     "barcode": "8901030919763",
     "product_name": "Mixed Fruit Jam",
     "brand": "Kissan",
     "ingredients": "Sugar, Mixed Fruit Pulp (48%) (Banana, Papaya, Apple, Pear, Pineapple, Orange, Mango, Grape), Thickener (E440), Acidity Regulator (E330), Vitamin B3, Preservative (E202).",
-    "nutrition_per_100g": { "energy_kcal": 272, "total_carbohydrates_g": 68.0, "total_sugars_g": 64.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 272,
+      "total_carbohydrates_g": 68.0,
+      "total_sugars_g": 64.0
+    }
   },
   {
     "barcode": "8901207051173",
     "product_name": "Pure Honey",
     "brand": "Dabur",
     "ingredients": "100% Pure Honey (No added sugar/preservatives).",
-    "nutrition_per_100g": { "energy_kcal": 320, "total_carbohydrates_g": 82.0, "total_sugars_g": 80.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 320,
+      "total_carbohydrates_g": 82.0,
+      "total_sugars_g": 80.0
+    }
   },
   {
     "barcode": "8904004403818",
     "product_name": "Dark Fantasy Choco Fills",
     "brand": "Sunfeast",
     "ingredients": "Choco Crème (38%) (Sugar, Edible Vegetable Oil (Palm), Cocoa Solids, Milk Solids, Antioxidant (E322), Hydrogenated Vegetable Fats), Wheat Flour, Hydrogenated Vegetable Oil, Sugar, Invert Sugar Syrup, Cocoa Solids, Raising Agents (E503ii, E500ii, E450i), Salt, Emulsifier (E322).",
-    "nutrition_per_100g": { "energy_kcal": 512, "total_carbohydrates_g": 63.0, "total_sugars_g": 33.5 }
+    "nutrition_per_100g": {
+      "energy_kcal": 512,
+      "total_carbohydrates_g": 63.0,
+      "total_sugars_g": 33.5
+    }
   },
   {
     "barcode": "8901058861617",
     "product_name": "Munch",
     "brand": "Nestlé",
     "ingredients": "Sugar, Refined Wheat Flour (Maida), Hydrogenated Vegetable Fats, Milk Solids, Cocoa Solids (3.8%), Fractionated Vegetable Fat, Emulsifier (Soya Lecithin), Raising Agent (500ii), Yeast, Iodized Salt, Flour Treatment Agent (1101i).",
-    "nutrition_per_100g": { "energy_kcal": 448, "total_carbohydrates_g": 62.0, "total_sugars_g": 43.5 }
+    "nutrition_per_100g": {
+      "energy_kcal": 448,
+      "total_carbohydrates_g": 62.0,
+      "total_sugars_g": 43.5
+    }
   },
   {
     "barcode": "8901207040436",
     "product_name": "Real Fruit Power Orange",
     "brand": "Real",
     "ingredients": "Water, Orange Juice Concentrate (12.4%), Sugar, Vitamins (A, C, E), Acidity Regulator (E330), Stabilizer (E440), Natural Orange Flavour.",
-    "nutrition_per_100g": { "energy_kcal": 48, "total_carbohydrates_g": 12.0, "total_sugars_g": 12.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 48,
+      "total_carbohydrates_g": 12.0,
+      "total_sugars_g": 12.0
+    }
   },
   {
     "barcode": "8901512001101",
     "product_name": "Saffola Gold Oil",
     "brand": "Saffola",
     "ingredients": "Refined Rice Bran Oil (70%), Refined Sunflower Oil (30%), Antioxidant (E319), Vitamin A, Vitamin D2, Anti-foaming agent (Dimethyl Polysiloxane).",
-    "nutrition_per_100g": { "energy_kcal": 900, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 900,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901719114005",
     "product_name": "Digestive Biscuits",
     "brand": "McVitie's",
     "ingredients": "Whole Wheat Flour (Atte) (37.7%), Refined Wheat Flour (Maida), Edible Vegetable Oil (Palm), Sugar, Wheat Bran (4.5%), Invert Sugar Syrup, Raising Agents (500ii, 503ii, 450i), Iodized Salt, Milk Solids, Malt Extract.",
-    "nutrition_per_100g": { "energy_kcal": 485, "total_carbohydrates_g": 68.0, "total_sugars_g": 16.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 485,
+      "total_carbohydrates_g": 68.0,
+      "total_sugars_g": 16.0
+    }
   },
   {
     "barcode": "8901030855269",
     "product_name": "Horlicks Classic Malt",
     "brand": "Horlicks",
     "ingredients": "Wheat Flour (33%), Malted Barley (Extracted Solids) (27%), Milk Solids (14%), Sugar, Cereal Extract (8%), Wheat Gluten, Minerals, Soy Protein Isolate, Vitamins, Edible Iodized Salt, Acidity Regulator (501ii, 500ii).",
-    "nutrition_per_100g": { "energy_kcal": 377, "total_carbohydrates_g": 79.0, "total_sugars_g": 13.5 }
+    "nutrition_per_100g": {
+      "energy_kcal": 377,
+      "total_carbohydrates_g": 79.0,
+      "total_sugars_g": 13.5
+    }
   },
   {
     "barcode": "8901233018252",
     "product_name": "Bournvita",
     "brand": "Cadbury",
     "ingredients": "Malt Extract (51%), Sugar, Cocoa Solids, Milk Solids, Caramel (150c), Liquid Glucose, Emulsifiers (322, 471), Raising Agent (500ii), Vitamins, Minerals, Salt.",
-    "nutrition_per_100g": { "energy_kcal": 393, "total_carbohydrates_g": 85.0, "total_sugars_g": 32.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 393,
+      "total_carbohydrates_g": 85.0,
+      "total_sugars_g": 32.0
+    }
   },
   {
     "barcode": "8901262175227",
     "product_name": "Masti Buttermilk",
     "brand": "Amul",
     "ingredients": "Milk Solids, Water, Iodized Salt, Spices & Condiments (Ginger, Black Pepper, Coriander, Cumin), Stabilizers (440, 418), Active Culture.",
-    "nutrition_per_100g": { "energy_kcal": 28, "total_carbohydrates_g": 2.2, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 28,
+      "total_carbohydrates_g": 2.2,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901030653155",
     "product_name": "Mixed Vegetable Soup",
     "brand": "Knorr",
     "ingredients": "Potato Starch, Maltodextrin, Refined Wheat Flour (Maida), Sugar, Iodized Salt, Dehydrated Vegetables (Carrot, Peas, Onion Powder, Leeks), Hydrolyzed Vegetable Protein, Thickener (415), Hydrogenated Palm Oil, Flavour Enhancers (627, 631).",
-    "nutrition_per_100g": { "energy_kcal": 335, "total_carbohydrates_g": 72.0, "total_sugars_g": 22.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 335,
+      "total_carbohydrates_g": 72.0,
+      "total_sugars_g": 22.0
+    }
   },
   {
     "barcode": "8901072002362",
     "product_name": "Nutrela Soya Chunks",
     "brand": "Nutrela",
     "ingredients": "100% Defatted Soya Flour.",
-    "nutrition_per_100g": { "energy_kcal": 345, "total_carbohydrates_g": 33.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 345,
+      "total_carbohydrates_g": 33.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901030935220",
     "product_name": "Bru Instant Coffee",
     "brand": "Bru",
     "ingredients": "Coffee (70%), Chicory (30%).",
-    "nutrition_per_100g": { "energy_kcal": 300, "total_carbohydrates_g": 55.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 300,
+      "total_carbohydrates_g": 55.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901023006129",
     "product_name": "Hide & Seek Chocolate Chips",
     "brand": "Parle",
     "ingredients": "Wheat Flour, Chocolate Chips (21%) (Sugar, Cocoa Mass, Cocoa Butter, Dextrose, Emulsifier (322), Flavours), Sugar, Edible Vegetable Oil (Palm), Invert Sugar Syrup, Cocoa Solids, Raising Agents (503ii, 500ii), Salt, Emulsifier (322).",
-    "nutrition_per_100g": { "energy_kcal": 480, "total_carbohydrates_g": 72.0, "total_sugars_g": 31.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 480,
+      "total_carbohydrates_g": 72.0,
+      "total_sugars_g": 31.0
+    }
   },
   {
     "barcode": "8901058134018",
     "product_name": "Nescafe Classic",
     "brand": "Nestlé",
     "ingredients": "100% Pure Coffee Beans (Arabica and Robusta).",
-    "nutrition_per_100g": { "energy_kcal": 0, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 0,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901030691881",
     "product_name": "Knorr Sweet Corn Veg Soup",
     "brand": "Knorr",
     "ingredients": "Maize Starch, Sugar, Dehydrated Vegetables (Sweet Corn (7.7%), Carrot, Cabbage), Iodized Salt, Hydrolyzed Vegetable Protein, Thickener (415), Spices & Condiments (Onion Powder, Garlic Powder, Celery), Acidity Regulator (330).",
-    "nutrition_per_100g": { "energy_kcal": 330, "total_carbohydrates_g": 74.0, "total_sugars_g": 28.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 330,
+      "total_carbohydrates_g": 74.0,
+      "total_sugars_g": 28.0
+    }
   },
   {
     "barcode": "8901491101786",
     "product_name": "Lay's Classic Salted",
     "brand": "Lay's",
     "ingredients": "Potato, Edible Vegetable Oil (Palmolein, Rice Bran Oil), Iodized Salt.",
-    "nutrition_per_100g": { "energy_kcal": 540, "total_carbohydrates_g": 51.0, "total_sugars_g": 0.5 }
+    "nutrition_per_100g": {
+      "energy_kcal": 540,
+      "total_carbohydrates_g": 51.0,
+      "total_sugars_g": 0.5
+    }
   },
   {
     "barcode": "8901138500245",
     "product_name": "Chyawanprash",
     "brand": "Dabur",
     "ingredients": "Amla, Sugar, Honey, Ghee, Pippali, Cinnamon, Cardamom, Various Herbal Extracts (Dashmoola, Ashwagandha, Vidarikand), Potassium Sorbate (Preservative).",
-    "nutrition_per_100g": { "energy_kcal": 315, "total_carbohydrates_g": 75.0, "total_sugars_g": 68.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 315,
+      "total_carbohydrates_g": 75.0,
+      "total_sugars_g": 68.0
+    }
   },
   {
     "barcode": "8901725114815",
     "product_name": "Haldiram's Bhujia Sev",
     "brand": "Haldiram's",
     "ingredients": "Moth Bean Flour (43%), Chickpeas Flour (12%), Edible Vegetable Oil (Cotton Seed, Corn & Palmolein), Iodized Salt, Mixed Spices (Red Chilli Powder, Black Pepper Powder, Clove Powder, Cardamom Powder, Ginger Powder, Mace Powder, Nutmeg Powder).",
-    "nutrition_per_100g": { "energy_kcal": 578, "total_carbohydrates_g": 38.0, "total_sugars_g": 1.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 578,
+      "total_carbohydrates_g": 38.0,
+      "total_sugars_g": 1.0
+    }
   },
   {
     "barcode": "8901030514125",
     "product_name": "Red Label Natural Care",
     "brand": "Brooke Bond",
     "ingredients": "Tea, Cardamom, Ginger, Tulsi, Ashwagandha, Mulethi.",
-    "nutrition_per_100g": { "energy_kcal": 0, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 0,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901063030312",
     "product_name": "Bourbon Biscuits",
     "brand": "Britannia",
     "ingredients": "Wheat Flour, Sugar, Edible Vegetable Oil (Palm), Cocoa Solids, Invert Syrup, Raising Agents (503ii, 500ii), Salt, Emulsifier (322), Colour (150d).",
-    "nutrition_per_100g": { "energy_kcal": 484, "total_carbohydrates_g": 71.0, "total_sugars_g": 37.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 484,
+      "total_carbohydrates_g": 71.0,
+      "total_sugars_g": 37.0
+    }
   },
   {
     "barcode": "8901491361241",
     "product_name": "Quaker Oats (Plain)",
     "brand": "Quaker",
     "ingredients": "100% Whole Grain Rolled Oats.",
-    "nutrition_per_100g": { "energy_kcal": 407, "total_carbohydrates_g": 67.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 407,
+      "total_carbohydrates_g": 67.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8904043901015",
     "product_name": "Iodized Salt",
     "brand": "Tata Salt",
     "ingredients": "Edible Common Salt, Potassium Iodate, Anticaking Agent (INS 536).",
-    "nutrition_per_100g": { "energy_kcal": 0, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 0,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901262020022",
     "product_name": "Amul Pure Ghee",
     "brand": "Amul",
     "ingredients": "Milk Fat (100%).",
-    "nutrition_per_100g": { "energy_kcal": 897, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 897,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901725114860",
     "product_name": "Khatta Meetha",
     "brand": "Haldiram's",
     "ingredients": "Chickpeas Flour (30%), Edible Vegetable Oil (Cotton Seed, Corn & Palmolein), Rice Flakes (10%), Sugar (9%), Green Peas (8%), Peanuts (7%), Lentils (5%), Sago, Salt, Turmeric, Spices, Citric Acid.",
-    "nutrition_per_100g": { "energy_kcal": 550, "total_carbohydrates_g": 52.0, "total_sugars_g": 10.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 550,
+      "total_carbohydrates_g": 52.0,
+      "total_sugars_g": 10.0
+    }
   },
   {
     "barcode": "8901491206146",
     "product_name": "Bingo! Mad Angles (Masala)",
     "brand": "Bingo!",
     "ingredients": "Rice Grits, Seasoning (Sugar, Spices & Condiments, Iodized Salt, Hydrolysed Vegetable Protein, Tamarind Powder, Garlic Powder), Edible Vegetable Oil, Corn Grits, Bengal Gram Grits.",
-    "nutrition_per_100g": { "energy_kcal": 530, "total_carbohydrates_g": 58.0, "total_sugars_g": 4.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 530,
+      "total_carbohydrates_g": 58.0,
+      "total_sugars_g": 4.0
+    }
   },
   {
     "barcode": "8906080604539",
     "product_name": "Mixed Fruit Juice",
     "brand": "Paper Boat",
     "ingredients": "Water, Mixed Fruit Concentrate (9.8%) (Orange, Apple, Pineapple, Banana, Apricot, Pear, Mango, Guava, Passion Fruit), Sugar, Acidity Regulator (Citric Acid), Stabilizer (Pectin), Vitamin C.",
-    "nutrition_per_100g": { "energy_kcal": 50, "total_carbohydrates_g": 12.5, "total_sugars_g": 12.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 50,
+      "total_carbohydrates_g": 12.5,
+      "total_sugars_g": 12.0
+    }
   },
   {
     "barcode": "8901030653148",
     "product_name": "Tomato Soup",
     "brand": "Knorr",
     "ingredients": "Maize Starch, Sugar, Refined Wheat Flour (Maida), Tomato Paste (12.2%), Salt, Hydrolyzed Vegetable Protein, Thickener (415), Spices, Beetroot Powder, Acidity Regulator (330).",
-    "nutrition_per_100g": { "energy_kcal": 335, "total_carbohydrates_g": 70.0, "total_sugars_g": 30.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 335,
+      "total_carbohydrates_g": 70.0,
+      "total_sugars_g": 30.0
+    }
   },
   {
     "barcode": "8901058890068",
     "product_name": "Nescafe Sunrise",
     "brand": "Nestlé",
     "ingredients": "Coffee Beans (70%), Chicory (30%).",
-    "nutrition_per_100g": { "energy_kcal": 300, "total_carbohydrates_g": 55.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 300,
+      "total_carbohydrates_g": 55.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901719114036",
     "product_name": "McVitie's Oat Biscuits",
     "brand": "McVitie's",
     "ingredients": "Wheat Flour (38%), Edible Vegetable Oil (Palm), Rolled Oats (15%), Sugar, Whole Wheat Flour (10%), Wheat Bran, Invert Sugar Syrup, Raising Agents (500ii, 503ii), Salt.",
-    "nutrition_per_100g": { "energy_kcal": 480, "total_carbohydrates_g": 62.0, "total_sugars_g": 14.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 480,
+      "total_carbohydrates_g": 62.0,
+      "total_sugars_g": 14.0
+    }
   },
   {
     "barcode": "8901063139336",
     "product_name": "Bourbon Choco Creme",
     "brand": "Britannia",
     "ingredients": "Refined Wheat Flour, Sugar, Edible Vegetable Oil (Palm), Cocoa Solids (2.3%), Invert Sugar Syrup, Raising Agents (503ii, 500ii), Iodized Salt, Emulsifier (322).",
-    "nutrition_per_100g": { "energy_kcal": 484, "total_carbohydrates_g": 71.0, "total_sugars_g": 37.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 484,
+      "total_carbohydrates_g": 71.0,
+      "total_sugars_g": 37.0
+    }
   },
   {
     "barcode": "8904109450327",
     "product_name": "Dant Kanti Toothpaste",
     "brand": "Patanjali",
     "ingredients": "Calcium Carbonate Base, Sorbitol, Glycerin, Herbal Extracts, Sodium Benzoate.",
-    "nutrition_per_100g": { "energy_kcal": 0, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 0,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901491361258",
     "product_name": "Masala Oats",
     "brand": "Quaker",
     "ingredients": "Whole Grain Rolled Oats (75%), Spices & Condiments (Onion, Turmeric, Pepper, Garlic, Coriander, Fenugreek), Salt, Sugar, Hydrolyzed Vegetable Protein, Dehydrated Vegetables (Carrot, Beans).",
-    "nutrition_per_100g": { "energy_kcal": 400, "total_carbohydrates_g": 65.0, "total_sugars_g": 3.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 400,
+      "total_carbohydrates_g": 65.0,
+      "total_sugars_g": 3.0
+    }
   },
   {
     "barcode": "8901101820011",
     "product_name": "MTR Poha (RTE)",
     "brand": "MTR Foods",
     "ingredients": "Beaten Rice (70%), Edible Vegetable Oil (Palm), Peanuts, Raisins, Salt, Sugar, Green Chilli, Spices (Mustard, Turmeric, Curry Leaves), Citric Acid.",
-    "nutrition_per_100g": { "energy_kcal": 410, "total_carbohydrates_g": 65.0, "total_sugars_g": 4.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 410,
+      "total_carbohydrates_g": 65.0,
+      "total_sugars_g": 4.0
+    }
   },
   {
     "barcode": "8901207034374",
     "product_name": "Honitus Cough Syrup",
     "brand": "Dabur",
     "ingredients": "Tulsi, Mulethi, Banapsha, Kantkari, Talispatra, Sunthi, Pippali, Vasaka, Shati, Pudina Satva, Honey.",
-    "nutrition_per_100g": { "energy_kcal": 280, "total_carbohydrates_g": 70.0, "total_sugars_g": 65.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 280,
+      "total_carbohydrates_g": 70.0,
+      "total_sugars_g": 65.0
+    }
   },
   {
     "barcode": "8901138500276",
     "product_name": "Ashwagandha Tablets",
     "brand": "Himalaya",
     "ingredients": "Ashwagandha (Withania Somnifera) Root Extract.",
-    "nutrition_per_100g": { "energy_kcal": 0, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 0,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901030132339",
     "product_name": "Red Label Care Tea",
     "brand": "Brooke Bond",
     "ingredients": "Tea (98.5%), Spices (1.5%) (Cardamom, Ginger, Tulsi, Ashwagandha, Mulethi).",
-    "nutrition_per_100g": { "energy_kcal": 0, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 0,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901725198129",
     "product_name": "Moong Dal (Salty)",
     "brand": "Haldiram's",
     "ingredients": "Moong Lentils (75%), Edible Vegetable Oil (Palmolein), Salt.",
-    "nutrition_per_100g": { "energy_kcal": 470, "total_carbohydrates_g": 48.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 470,
+      "total_carbohydrates_g": 48.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8904004403856",
     "product_name": "Sunfeast Marie Light",
     "brand": "Sunfeast",
     "ingredients": "Wheat Flour, Sugar, Refined Palm Oil, Invert Syrup, Raising Agents (503ii, 500ii), Salt, Milk Solids, Vitamins, Dough Conditioner (223).",
-    "nutrition_per_100g": { "energy_kcal": 445, "total_carbohydrates_g": 77.0, "total_sugars_g": 21.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 445,
+      "total_carbohydrates_g": 77.0,
+      "total_sugars_g": 21.0
+    }
   },
   {
     "barcode": "8901207040375",
     "product_name": "Real Fruit Power (Guava)",
     "brand": "Real",
     "ingredients": "Water, Guava Pulp (25%), Sugar, Stabilizer (440), Acidity Regulator (330), Vitamin C.",
-    "nutrition_per_100g": { "energy_kcal": 54, "total_carbohydrates_g": 13.5, "total_sugars_g": 13.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 54,
+      "total_carbohydrates_g": 13.5,
+      "total_sugars_g": 13.0
+    }
   },
   {
     "barcode": "8901058004168",
     "product_name": "Maggi Pasta (Masala)",
     "brand": "Nestlé",
     "ingredients": "Pasta: Semolina (100% from Wheat). Masala: Milk Solids, Sugar, Spices (Onion, Garlic, Turmeric, Chilli, Coriander, Cumin, Fenugreek), Salt, Hydrolyzed Groundnut Protein, Palm Oil.",
-    "nutrition_per_100g": { "energy_kcal": 360, "total_carbohydrates_g": 68.0, "total_sugars_g": 5.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 360,
+      "total_carbohydrates_g": 68.0,
+      "total_sugars_g": 5.0
+    }
   },
   {
     "barcode": "8904322800053",
     "product_name": "Epigamia Greek Yogurt",
     "brand": "Epigamia",
     "ingredients": "Pasteurized Toned Milk, Milk Solids, Enzyme (Lactase), Active Live Culture.",
-    "nutrition_per_100g": { "energy_kcal": 92, "total_carbohydrates_g": 5.0, "total_sugars_g": 4.5 }
+    "nutrition_per_100g": {
+      "energy_kcal": 92,
+      "total_carbohydrates_g": 5.0,
+      "total_sugars_g": 4.5
+    }
   },
   {
     "barcode": "8901063013445",
     "product_name": "Britannia 50-50",
     "brand": "Britannia",
     "ingredients": "Wheat Flour, Edible Vegetable Oil (Palm), Sugar, Raising Agents (503ii, 500ii), Invert Sugar Syrup, Salt, Yeast, Emulsifier (322).",
-    "nutrition_per_100g": { "energy_kcal": 485, "total_carbohydrates_g": 69.0, "total_sugars_g": 8.5 }
+    "nutrition_per_100g": {
+      "energy_kcal": 485,
+      "total_carbohydrates_g": 69.0,
+      "total_sugars_g": 8.5
+    }
   },
   {
     "barcode": "8904109400032",
     "product_name": "Patanjali Honey",
     "brand": "Patanjali",
     "ingredients": "100% Pure Honey.",
-    "nutrition_per_100g": { "energy_kcal": 320, "total_carbohydrates_g": 82.0, "total_sugars_g": 80.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 320,
+      "total_carbohydrates_g": 82.0,
+      "total_sugars_g": 80.0
+    }
   },
   {
     "barcode": "8906000613207",
     "product_name": "Bagrry's Muesli",
     "brand": "Bagrry's",
     "ingredients": "Rolled Oats (34%), Whole Wheat (30%), Corn Flakes, Honey (3%), Raisins (2%), Almonds (1%), Malt Extract, Antioxidant (320).",
-    "nutrition_per_100g": { "energy_kcal": 390, "total_carbohydrates_g": 75.0, "total_sugars_g": 12.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 390,
+      "total_carbohydrates_g": 75.0,
+      "total_sugars_g": 12.0
+    }
   },
   {
     "barcode": "8901262070348",
     "product_name": "Amul Gold (Full Cream)",
     "brand": "Amul",
     "ingredients": "Fresh Milk (Milk Fat 6% min, SNF 9% min).",
-    "nutrition_per_100g": { "energy_kcal": 87, "total_carbohydrates_g": 5.0, "total_sugars_g": 5.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 87,
+      "total_carbohydrates_g": 5.0,
+      "total_sugars_g": 5.0
+    }
   },
   {
     "barcode": "8901030034114",
     "product_name": "Taj Mahal Tea",
     "brand": "Brooke Bond",
     "ingredients": "Fine Quality CTC Tea Leaves.",
-    "nutrition_per_100g": { "energy_kcal": 0, "total_carbohydrates_g": 0.0, "total_sugars_g": 0.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 0,
+      "total_carbohydrates_g": 0.0,
+      "total_sugars_g": 0.0
+    }
   },
   {
     "barcode": "8901148630048",
     "product_name": "Mother's Recipe Mixed Pickle",
     "brand": "Mother's Recipe",
     "ingredients": "Mixed Vegetables (Mango, Lime, Carrot, Green Chilli, Ginger), Brine (Salt, Water), Edible Vegetable Oil, Spices (Mustard, Fenugreek, Turmeric, Chilli), Acidity Regulator (260).",
-    "nutrition_per_100g": { "energy_kcal": 160, "total_carbohydrates_g": 12.0, "total_sugars_g": 2.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 160,
+      "total_carbohydrates_g": 12.0,
+      "total_sugars_g": 2.0
+    }
   },
   {
     "barcode": "8901058000184_k",
     "product_name": "Maggi Ketchup",
     "brand": "Nestle",
     "ingredients": "Water, Sugar, Tomato Paste (24.5%), Salt, Acidity Regulator (260), Thickener (415), Garlic, Onion, Spices.",
-    "nutrition_per_100g": { "energy_kcal": 140, "total_carbohydrates_g": 35.0, "total_sugars_g": 33.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 140,
+      "total_carbohydrates_g": 35.0,
+      "total_sugars_g": 33.0
+    }
   },
   {
     "barcode": "8904004403818_m",
     "product_name": "Sunfeast Mom's Magic",
     "brand": "Sunfeast",
     "ingredients": "Wheat Flour, Sugar, Edible Vegetable Oil (Palm), Cashew Bits, Almond Flakes, Milk Solids, Invert Syrup, Raising Agents (503ii, 500ii).",
-    "nutrition_per_100g": { "energy_kcal": 505, "total_carbohydrates_g": 64.0, "total_sugars_g": 26.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 505,
+      "total_carbohydrates_g": 64.0,
+      "total_sugars_g": 26.0
+    }
   },
   {
     "barcode": "8901030855269_c",
     "product_name": "Chocolate Horlicks",
     "brand": "Horlicks",
     "ingredients": "Wheat Flour, Malted Barley, Milk Solids, Sugar, Cocoa Powder, Minerals, Soy Protein Isolate, Vitamins, Salt.",
-    "nutrition_per_100g": { "energy_kcal": 385, "total_carbohydrates_g": 78.0, "total_sugars_g": 28.0 }
+    "nutrition_per_100g": {
+      "energy_kcal": 385,
+      "total_carbohydrates_g": 78.0,
+      "total_sugars_g": 28.0
+    }
   },
   {
     "barcode": "8901063142138",
     "product_name": "Britannia NutriChoice Digestive",
     "brand": "Britannia",
     "ingredients": "Wheat Flour (55%), Edible Vegetable Oil, Whole Wheat Flour (12%), Sugar, Wheat Bran (4.7%), Invert Syrup, Raising Agents, Salt, Malt Extract, Dough Conditioner.",
-    "nutrition_per_100g": { "energy_kcal": 482, "total_carbohydrates_g": 66.0, "total_sugars_g": 14.5 }
+    "nutrition_per_100g": {
+      "energy_kcal": 482,
+      "total_carbohydrates_g": 66.0,
+      "total_sugars_g": 14.5
+    }
+  },
+  {
+    "barcode": "7622202819445",
+    "product_name": "Dairy Milk Crispello",
+    "brand": "Cadbury",
+    "ingredients": "Milk Chocolate (50%) [Sugar, Milk Solids (11%*), Cocoa Butter, Cocoa Solids, Fractionated Fat, Emulsifiers (442, 476), Flavours (Natural, Nature Identical and Artificial (Vanilla) Flavouring Substances)]; Centre (50%) [Sugar, Fractionated Fat, Wheat Crispies 11%* (Refined Wheat Flour (Maida), Sugar, Corn Starch, Cocoa Solids, Iodised Salt, Palm Kernel Oil, Leavening Agents (450(i), 500(ii), 341(i))), Corn Starch, Cocoa Solids, Emulsifiers (442, 476), Iodised Salt, Artificial (Vanilla) Flavouring Substances].",
+    "nutrition_per_100g": {
+      "energy_kcal": 523,
+      "total_carbohydrates_g": 64.5,
+      "total_sugars_g": 50.2
+    }
   }
 ]
