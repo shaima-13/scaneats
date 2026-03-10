@@ -11,6 +11,7 @@ interface ScannerProps {
 export default function Scanner({ onScan }: ScannerProps) {
     const [isManual, setIsManual] = useState(false);
     const [manualCode, setManualCode] = useState("");
+    const [debugLog, setDebugLog] = useState<string>("Initializing...");
     const videoRef = useRef<HTMLVideoElement>(null);
     const controlsRef = useRef<IScannerControls | null>(null);
     const hasScannedRef = useRef(false);
@@ -23,14 +24,14 @@ export default function Scanner({ onScan }: ScannerProps) {
     useEffect(() => {
         if (isManual) return;
         hasScannedRef.current = false;
-        console.log("Scanner component mounted, initiating ZXing...");
+        setDebugLog("Component mounted, initiating ZXing...");
 
         const codeReader = new BrowserMultiFormatReader();
 
         const startScanning = async () => {
             if (!videoRef.current) return;
             try {
-                console.log("Requesting camera stream with environment constraints...");
+                setDebugLog("Requesting stream (environment)...");
 
                 // Some browsers (iOS Safari) do not provide device IDs until permission is granted via constraints.
                 // Requesting standard constraints allows the browser to natively prompt the user for permission.
@@ -38,9 +39,7 @@ export default function Scanner({ onScan }: ScannerProps) {
                     {
                         audio: false,
                         video: {
-                            facingMode: "environment",
-                            width: { ideal: 1280 },
-                            height: { ideal: 720 }
+                            facingMode: "environment"
                         }
                     },
                     videoRef.current,
@@ -58,9 +57,10 @@ export default function Scanner({ onScan }: ScannerProps) {
                         }
                     }
                 );
-                console.log("Camera started successfully.");
-            } catch (err) {
+                setDebugLog("Camera started successfully.");
+            } catch (err: any) {
                 console.error("Camera access failed:", err);
+                setDebugLog(`Error: ${err?.name || 'Unknown'} - ${err?.message || String(err)}`);
             }
         };
 
@@ -137,6 +137,11 @@ export default function Scanner({ onScan }: ScannerProps) {
                         <p style={{ textAlign: "center", fontSize: "0.85rem", color: "var(--text-muted)", marginTop: "16px" }}>
                             Point your camera clearly at a product barcode.
                         </p>
+                        {debugLog && (
+                            <div style={{ padding: "8px", marginTop: "12px", background: "rgba(0,0,0,0.5)", borderRadius: "8px", color: "#ff8c8c", fontSize: "0.8rem", textAlign: "center", fontFamily: "monospace", wordBreak: "break-all" }}>
+                                {debugLog}
+                            </div>
+                        )}
                     </div>
                 ) : (
                     <form onSubmit={handleManualSubmit} className="animate-fade-in">
