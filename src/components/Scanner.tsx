@@ -35,7 +35,6 @@ export default function Scanner({ onScan }: ScannerProps) {
                 "qr-reader",
                 {
                     fps: 10, // 20fps is too fast for Safari's WASM worker, causing dropped frames
-                    qrbox: { width: 250, height: 150 }, // 350px width overflows iPhone portrait screens causing coordinate distortion
                     supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
                     rememberLastUsedCamera: true,
                     formatsToSupport: [
