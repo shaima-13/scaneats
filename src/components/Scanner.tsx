@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Html5QrcodeScanner, Html5QrcodeScanType } from "html5-qrcode";
+import { Html5QrcodeScanner, Html5QrcodeScanType, Html5QrcodeSupportedFormats } from "html5-qrcode";
 import { Camera, Keyboard } from "lucide-react";
 
 interface ScannerProps {
@@ -34,10 +34,24 @@ export default function Scanner({ onScan }: ScannerProps) {
             scannerRef.current = new Html5QrcodeScanner(
                 "qr-reader",
                 {
-                    fps: 10,
-                    qrbox: { width: 250, height: 150 },
+                    fps: 20, // Increased FPS for faster sampling on mobile
+                    qrbox: { width: 350, height: 150 }, // Wider horizontal box for 1D barcodes
                     supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
                     rememberLastUsedCamera: true,
+                    videoConstraints: {
+                        facingMode: "environment", // Force rear camera
+                        width: { min: 640, ideal: 1920, max: 1920 }, // High resolution priority
+                        height: { min: 480, ideal: 1080, max: 1080 }
+                    },
+                    formatsToSupport: [
+                        Html5QrcodeSupportedFormats.EAN_13,
+                        Html5QrcodeSupportedFormats.EAN_8,
+                        Html5QrcodeSupportedFormats.UPC_A,
+                        Html5QrcodeSupportedFormats.UPC_E,
+                        Html5QrcodeSupportedFormats.CODE_128,
+                        Html5QrcodeSupportedFormats.CODE_39,
+                        Html5QrcodeSupportedFormats.QR_CODE
+                    ]
                 },
                 /* verbose= */ false
             );
