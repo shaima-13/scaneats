@@ -105,6 +105,9 @@ export default function Scanner({ onScan }: ScannerProps) {
                     <div style={{ position: "relative" }}>
                         <video
                             ref={videoRef}
+                            playsInline
+                            muted
+                            autoPlay
                             style={{
                                 width: "100%",
                                 borderRadius: "var(--radius-md)",
