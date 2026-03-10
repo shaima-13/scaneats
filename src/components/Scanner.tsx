@@ -40,8 +40,8 @@ export default function Scanner({ onScan }: ScannerProps) {
                     rememberLastUsedCamera: true,
                     videoConstraints: {
                         facingMode: "environment", // Force rear camera
-                        width: { min: 640, ideal: 1920, max: 1920 }, // High resolution priority
-                        height: { min: 480, ideal: 1080, max: 1080 }
+                        width: { ideal: 1920 }, // Softer constraints for iOS compatibility
+                        height: { ideal: 1080 }
                     },
                     formatsToSupport: [
                         Html5QrcodeSupportedFormats.EAN_13,
