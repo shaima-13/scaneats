@@ -14,47 +14,51 @@ export default function Scanner({ onScan }: ScannerProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const controlsRef = useRef<IScannerControls | null>(null);
     const hasScannedRef = useRef(false);
+    const onScanRef = useRef(onScan);
+
+    useEffect(() => {
+        onScanRef.current = onScan;
+    }, [onScan]);
 
     useEffect(() => {
         if (isManual) return;
         hasScannedRef.current = false;
+        console.log("Scanner component mounted, initiating ZXing...");
 
         const codeReader = new BrowserMultiFormatReader();
 
         const startScanning = async () => {
             if (!videoRef.current) return;
             try {
-                // Determine preferred camera (environment facing)
-                const videoInputDevices = await BrowserMultiFormatReader.listVideoInputDevices();
-                let selectedDeviceId = videoInputDevices[0]?.deviceId;
+                console.log("Requesting camera stream with environment constraints...");
 
-                // Try to find a back/environment camera
-                const backCamera = videoInputDevices.find(device =>
-                    device.label.toLowerCase().includes('back') ||
-                    device.label.toLowerCase().includes('environment')
-                );
-
-                if (backCamera) {
-                    selectedDeviceId = backCamera.deviceId;
-                }
-
-                controlsRef.current = await codeReader.decodeFromVideoDevice(
-                    selectedDeviceId,
+                // Some browsers (iOS Safari) do not provide device IDs until permission is granted via constraints.
+                // Requesting standard constraints allows the browser to natively prompt the user for permission.
+                controlsRef.current = await codeReader.decodeFromConstraints(
+                    {
+                        audio: false,
+                        video: {
+                            facingMode: "environment",
+                            width: { ideal: 1280 },
+                            height: { ideal: 720 }
+                        }
+                    },
                     videoRef.current,
                     (result, error) => {
                         if (result && !hasScannedRef.current) {
+                            console.log("Scanned successfully:", result.getText());
                             hasScannedRef.current = true;
                             if (controlsRef.current) {
                                 controlsRef.current.stop();
                             }
-                            onScan(result.getText());
+                            onScanRef.current(result.getText());
                         }
                         if (error && error.name !== 'NotFoundException') {
-                            // Only log actual errors, not just "not found this frame"
-                            console.debug(error);
+                            console.debug("Scan error:", error);
                         }
                     }
                 );
+                console.log("Camera started successfully.");
             } catch (err) {
                 console.error("Camera access failed:", err);
             }
@@ -63,11 +67,12 @@ export default function Scanner({ onScan }: ScannerProps) {
         startScanning();
 
         return () => {
+            console.log("Scanner component unmounting, stopping ZXing...", !!controlsRef.current);
             if (controlsRef.current) {
                 controlsRef.current.stop();
             }
         };
-    }, [isManual, onScan]);
+    }, [isManual]);
 
     const handleManualSubmit = (e: React.FormEvent) => {
         e.preventDefault();
