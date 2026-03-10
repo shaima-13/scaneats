@@ -34,15 +34,10 @@ export default function Scanner({ onScan }: ScannerProps) {
             scannerRef.current = new Html5QrcodeScanner(
                 "qr-reader",
                 {
-                    fps: 20, // Increased FPS for faster sampling on mobile
-                    qrbox: { width: 350, height: 150 }, // Wider horizontal box for 1D barcodes
+                    fps: 10, // 20fps is too fast for Safari's WASM worker, causing dropped frames
+                    qrbox: { width: 250, height: 150 }, // 350px width overflows iPhone portrait screens causing coordinate distortion
                     supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
                     rememberLastUsedCamera: true,
-                    videoConstraints: {
-                        facingMode: "environment", // Force rear camera
-                        width: { ideal: 1920 }, // Softer constraints for iOS compatibility
-                        height: { ideal: 1080 }
-                    },
                     formatsToSupport: [
                         Html5QrcodeSupportedFormats.EAN_13,
                         Html5QrcodeSupportedFormats.EAN_8,
