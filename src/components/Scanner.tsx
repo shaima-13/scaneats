@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Html5QrcodeScanner, Html5QrcodeScanType, Html5QrcodeSupportedFormats } from "html5-qrcode";
+import { BrowserMultiFormatReader, IScannerControls } from "@zxing/browser";
 import { Camera, Keyboard } from "lucide-react";
 
 interface ScannerProps {
@@ -11,81 +11,68 @@ interface ScannerProps {
 export default function Scanner({ onScan }: ScannerProps) {
     const [isManual, setIsManual] = useState(false);
     const [manualCode, setManualCode] = useState("");
-    const scannerRef = useRef<Html5QrcodeScanner | null>(null);
-    const onScanRef = useRef(onScan);
-
-    useEffect(() => {
-        onScanRef.current = onScan;
-    }, [onScan]);
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const controlsRef = useRef<IScannerControls | null>(null);
+    const hasScannedRef = useRef(false);
 
     useEffect(() => {
         if (isManual) return;
+        hasScannedRef.current = false;
 
-        let isMounted = true;
+        const codeReader = new BrowserMultiFormatReader();
 
-        // Delay to prevent React 18 strict mode double-invocations
-        const timeoutId = setTimeout(() => {
-            if (!isMounted) return;
+        const startScanning = async () => {
+            if (!videoRef.current) return;
+            try {
+                // Determine preferred camera (environment facing)
+                const videoInputDevices = await BrowserMultiFormatReader.listVideoInputDevices();
+                let selectedDeviceId = videoInputDevices[0]?.deviceId;
 
-            // Ensure the container exists before initializing
-            const el = document.getElementById("qr-reader");
-            if (!el) return;
+                // Try to find a back/environment camera
+                const backCamera = videoInputDevices.find(device =>
+                    device.label.toLowerCase().includes('back') ||
+                    device.label.toLowerCase().includes('environment')
+                );
 
-            scannerRef.current = new Html5QrcodeScanner(
-                "qr-reader",
-                {
-                    fps: 10, // 20fps is too fast for Safari's WASM worker, causing dropped frames
-                    supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
-                    rememberLastUsedCamera: true,
-                    formatsToSupport: [
-                        Html5QrcodeSupportedFormats.EAN_13,
-                        Html5QrcodeSupportedFormats.EAN_8,
-                        Html5QrcodeSupportedFormats.UPC_A,
-                        Html5QrcodeSupportedFormats.UPC_E,
-                        Html5QrcodeSupportedFormats.CODE_128,
-                        Html5QrcodeSupportedFormats.CODE_39,
-                        Html5QrcodeSupportedFormats.QR_CODE
-                    ]
-                },
-                /* verbose= */ false
-            );
+                if (backCamera) {
+                    selectedDeviceId = backCamera.deviceId;
+                }
 
-            scannerRef.current.render(
-                (decodedText) => {
-                    // Let the React unmount cleanup handle stopping the hardware.
-                    // Doing it prematurely here crashes html5-qrcode.
-                    if (scannerRef.current) {
-                        try {
-                            scannerRef.current.pause(true);
-                        } catch (e) {
-                            console.error("Pause catch err:", e);
+                controlsRef.current = await codeReader.decodeFromVideoDevice(
+                    selectedDeviceId,
+                    videoRef.current,
+                    (result, error) => {
+                        if (result && !hasScannedRef.current) {
+                            hasScannedRef.current = true;
+                            if (controlsRef.current) {
+                                controlsRef.current.stop();
+                            }
+                            onScan(result.getText());
+                        }
+                        if (error && error.name !== 'NotFoundException') {
+                            // Only log actual errors, not just "not found this frame"
+                            console.debug(error);
                         }
                     }
-                    onScanRef.current(decodedText);
-                },
-                (error) => {
-                    // Ignore frequent scanning errors
-                }
-            );
-        }, 50);
-
-        return () => {
-            isMounted = false;
-            clearTimeout(timeoutId);
-            if (scannerRef.current) {
-                try {
-                    scannerRef.current.clear().catch(e => console.error("Cleanup clear err:", e));
-                } catch (e) {
-                    console.error("Cleanup clear catch err:", e);
-                }
-                scannerRef.current = null;
+                );
+            } catch (err) {
+                console.error("Camera access failed:", err);
             }
         };
-    }, [isManual]);
+
+        startScanning();
+
+        return () => {
+            if (controlsRef.current) {
+                controlsRef.current.stop();
+            }
+        };
+    }, [isManual, onScan]);
 
     const handleManualSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        if (manualCode.trim()) {
+        if (manualCode.trim() && !hasScannedRef.current) {
+            hasScannedRef.current = true;
             onScan(manualCode.trim());
         }
     };
@@ -115,10 +102,32 @@ export default function Scanner({ onScan }: ScannerProps) {
 
             <div style={{ padding: "24px" }}>
                 {!isManual ? (
-                    <div>
-                        <div id="qr-reader" style={{ width: "100%", borderRadius: "var(--radius-md)", overflow: "hidden" }}></div>
+                    <div style={{ position: "relative" }}>
+                        <video
+                            ref={videoRef}
+                            style={{
+                                width: "100%",
+                                borderRadius: "var(--radius-md)",
+                                backgroundColor: "black",
+                                objectFit: "cover",
+                                minHeight: "300px"
+                            }}
+                        />
+                        {/* Fake scanner reticle for UX */}
+                        <div style={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            transform: "translate(-50%, -50%)",
+                            width: "250px",
+                            height: "150px",
+                            border: "2px dashed rgba(255,255,255,0.5)",
+                            borderRadius: "12px",
+                            pointerEvents: "none"
+                        }}></div>
+
                         <p style={{ textAlign: "center", fontSize: "0.85rem", color: "var(--text-muted)", marginTop: "16px" }}>
-                            Point your camera at a product barcode (EAN/UPC).
+                            Point your camera clearly at a product barcode.
                         </p>
                     </div>
                 ) : (
@@ -139,44 +148,6 @@ export default function Scanner({ onScan }: ScannerProps) {
                     </form>
                 )}
             </div>
-
-            <style>{`
-        /* Overriding html5-qrcode default ugly styles */
-        #qr-reader {
-          border: 2px dashed var(--border-color) !important;
-          background: var(--bg-card);
-        }
-        #qr-reader__scan_region {
-          background: black;
-        }
-        #qr-reader__dashboard_section_csr span {
-          color: var(--text-main) !important;
-          font-family: inherit !important;
-        }
-        #qr-reader button {
-          background: var(--primary) !important;
-          color: white !important;
-          border: none !important;
-          padding: 8px 16px !important;
-          border-radius: var(--radius-md) !important;
-          cursor: pointer !important;
-          font-family: inherit !important;
-          font-weight: 500 !important;
-          margin-top: 12px;
-        }
-        #qr-reader select {
-          background: var(--bg-main) !important;
-          color: white !important;
-          border: 1px solid var(--border-color) !important;
-          padding: 8px !important;
-          border-radius: var(--radius-md) !important;
-          font-family: inherit !important;
-          margin-bottom: 8px;
-        }
-        #qr-reader__has_camera a {
-          color: var(--primary) !important;
-        }
-      `}</style>
         </div>
     );
 }
