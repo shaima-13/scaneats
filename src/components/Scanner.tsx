@@ -82,6 +82,31 @@ export default function Scanner({ onScan }: ScannerProps) {
         }
     };
 
+    const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        setDebugLog("Analyzing captured image...");
+        try {
+            // Stop live camera if it's running to free up resources
+            if (controlsRef.current) {
+                controlsRef.current.stop();
+            }
+
+            const imageUrl = URL.createObjectURL(file);
+            const codeReader = new BrowserMultiFormatReader();
+            const result = await codeReader.decodeFromImageUrl(imageUrl);
+
+            if (result && !hasScannedRef.current) {
+                hasScannedRef.current = true;
+                onScanRef.current(result.getText());
+            }
+        } catch (err: any) {
+            console.error("Image scan failed:", err);
+            setDebugLog(`Could not detect barcode in that photo. Please try again or use Manual Entry.`);
+        }
+    };
+
     return (
         <div className="glass-panel" style={{ padding: "0", overflow: "hidden" }}>
             <div style={{ display: "flex", borderBottom: "1px solid var(--border-color)" }}>
@@ -142,6 +167,33 @@ export default function Scanner({ onScan }: ScannerProps) {
                                 {debugLog}
                             </div>
                         )}
+
+                        <div style={{ marginTop: "24px", textAlign: "center" }}>
+                            <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "8px" }}>
+                                Camera blurry or not focusing?
+                            </p>
+                            <label style={{
+                                display: "block",
+                                cursor: "pointer",
+                                width: "100%",
+                                padding: "14px",
+                                borderRadius: "var(--radius-md)",
+                                background: "var(--glass-border)",
+                                color: "white",
+                                fontWeight: 500,
+                                border: "1px solid var(--border-color)",
+                                transition: "all 0.2s"
+                            }}>
+                                📸 Take Photo Instead
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    capture="environment"
+                                    onChange={handleFileUpload}
+                                    style={{ display: "none" }}
+                                />
+                            </label>
+                        </div>
                     </div>
                 ) : (
                     <form onSubmit={handleManualSubmit} className="animate-fade-in">
