@@ -94,13 +94,74 @@ export default function Scanner({ onScan }: ScannerProps) {
             }
 
             const imageUrl = URL.createObjectURL(file);
-            const codeReader = new BrowserMultiFormatReader();
-            const result = await codeReader.decodeFromImageUrl(imageUrl);
+            const img = new Image();
+            img.src = imageUrl;
 
-            if (result && !hasScannedRef.current) {
-                hasScannedRef.current = true;
-                onScanRef.current(result.getText());
+            // Wait for image to load
+            await new Promise((resolve, reject) => {
+                img.onload = resolve;
+                img.onerror = reject;
+            });
+
+            // 1. Apple Vision / Native Android ML Fallback
+            if ('BarcodeDetector' in window) {
+                try {
+                    setDebugLog("Analyzing with Native ML Engine...");
+                    // @ts-ignore
+                    const barcodeDetector = new BarcodeDetector({
+                        formats: ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'qr_code', 'code_128', 'code_39']
+                    });
+                    const barcodes = await barcodeDetector.detect(img);
+
+                    if (barcodes.length > 0 && !hasScannedRef.current) {
+                        hasScannedRef.current = true;
+                        onScanRef.current(barcodes[0].rawValue);
+                        URL.revokeObjectURL(imageUrl);
+                        return;
+                    }
+                } catch (apiErr) {
+                    console.warn("Native BarcodeDetector failed:", apiErr);
+                }
             }
+
+            // 2. ZXing JS Fallback with Downscaling
+            setDebugLog("Scanning with ZXing fallback engine...");
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+
+            // Limit to 1200px max so it doesn't crash iPhone RAM
+            const MAX_DIM = 1200;
+            let w = img.width;
+            let h = img.height;
+            if (w > h && w > MAX_DIM) {
+                h = Math.round(h * (MAX_DIM / w)); w = MAX_DIM;
+            } else if (h > w && h > MAX_DIM) {
+                w = Math.round(w * (MAX_DIM / h)); h = MAX_DIM;
+            }
+
+            canvas.width = w;
+            canvas.height = h;
+            if (ctx) {
+                ctx.drawImage(img, 0, 0, w, h);
+            }
+
+            const codeReader = new BrowserMultiFormatReader();
+            try {
+                // We pass the downscaled canvas to ZXing so it doesn't choke on 12MP images
+                const result = await codeReader.decodeFromCanvas(canvas);
+                if (result && !hasScannedRef.current) {
+                    hasScannedRef.current = true;
+                    onScanRef.current(result.getText());
+                    URL.revokeObjectURL(imageUrl);
+                    return;
+                }
+            } catch (zxingErr) {
+                console.warn("ZXing decodeFromCanvas failed", zxingErr);
+            }
+
+            setDebugLog("Could not detect barcode. Please try getting closer, making sure there is no glare, or use Manual Entry.");
+            URL.revokeObjectURL(imageUrl);
+
         } catch (err: any) {
             console.error("Image scan failed:", err);
             setDebugLog(`Could not detect barcode in that photo. Please try again or use Manual Entry.`);
