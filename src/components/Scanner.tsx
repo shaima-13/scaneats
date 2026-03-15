@@ -124,10 +124,8 @@ export default function Scanner({ onScan }: ScannerProps) {
                 }
             }
 
-            // 2. ZXing JS Fallback with Downscaling
+            // 2. ZXing JS Fallback with Downscaling & Rotation
             setDebugLog("Scanning with ZXing fallback engine...");
-            const canvas = document.createElement("canvas");
-            const ctx = canvas.getContext("2d");
 
             // Limit to 1200px max so it doesn't crash iPhone RAM
             const MAX_DIM = 1200;
@@ -139,24 +137,39 @@ export default function Scanner({ onScan }: ScannerProps) {
                 w = Math.round(w * (MAX_DIM / h)); h = MAX_DIM;
             }
 
-            canvas.width = w;
-            canvas.height = h;
-            if (ctx) {
-                ctx.drawImage(img, 0, 0, w, h);
-            }
-
             const codeReader = new BrowserMultiFormatReader();
-            try {
-                // We pass the downscaled canvas to ZXing so it doesn't choke on 12MP images
-                const result = await codeReader.decodeFromCanvas(canvas);
-                if (result && !hasScannedRef.current) {
-                    hasScannedRef.current = true;
-                    onScanRef.current(result.getText());
-                    URL.revokeObjectURL(imageUrl);
-                    return;
+            const angles = [0, 90, 180, 270]; // 1D Barcodes only scan horizontally, so we must test rotations
+
+            for (const angle of angles) {
+                try {
+                    setDebugLog(`Scanning image orientation: ${angle}°...`);
+                    const canvas = document.createElement("canvas");
+                    const ctx = canvas.getContext("2d");
+                    if (!ctx) continue;
+
+                    // Swap dimensions if rotated 90 or 270 degrees
+                    if (angle === 0 || angle === 180) {
+                        canvas.width = w;
+                        canvas.height = h;
+                    } else {
+                        canvas.width = h;
+                        canvas.height = w;
+                    }
+
+                    ctx.translate(canvas.width / 2, canvas.height / 2);
+                    ctx.rotate((angle * Math.PI) / 180);
+                    ctx.drawImage(img, -w / 2, -h / 2, w, h);
+
+                    const result = await codeReader.decodeFromCanvas(canvas);
+                    if (result && !hasScannedRef.current) {
+                        hasScannedRef.current = true;
+                        onScanRef.current(result.getText());
+                        URL.revokeObjectURL(imageUrl);
+                        return;
+                    }
+                } catch (zxingErr) {
+                    // It failed to find a barcode at this angle, quietly continue to the next
                 }
-            } catch (zxingErr) {
-                console.warn("ZXing decodeFromCanvas failed", zxingErr);
             }
 
             setDebugLog("Could not detect barcode. Please try getting closer, making sure there is no glare, or use Manual Entry.");
